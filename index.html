@@ -15,21 +15,32 @@
   <body>
     <div class="app-area">
       <header>
-        <form>
-          <input type="search" placeholder="Enter a city..." required />
-          <input type="submit" value="Search" />
+        <form class="city-search-form">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            class="city-form-input"
+          />
+          <input type="submit" value="Search" class="city-form-submit" />
         </form>
       </header>
       <main>
-        <h1>London</h1>
-        <div>
-          <p>
-            Monday 14:55, scattered clouds
-            <br />
-            Humidity 66%, Wind: 3.15km/h
-          </p>
+      
+        <div class="todays-weather-data">
+          <div>
+              <h1 class="selected-city">London</h1>
+            <p class="selected-city-metrics">
+              Monday 14:55, scattered clouds
+              <br />
+              Humidity <strong>66%</strong>, Wind: <strong>3.15km/h</strong>
+            </p>
+          </div>
+        <div class="headline-temperature-container">
+        <div class="selected-city-icon">☀️</div>
+        <div class="selected-city-headline-temp">19</div>
+        <div class="headline-temp-unit">°C</div>
         </div>
-        <div>☀️19°C</div>
       </main>
       <footer>
         Coded by
