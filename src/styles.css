@@ -1,6 +1,12 @@
 body {
-  background-color: grey;
-  font-family: "Roboto", sans-serif;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(220, 217, 249) 0%,
+    rgb(172, 224, 217) 89.8%
+  );
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 40px;
+  color: grey;
 }
 a {
   color: #3caab9;
@@ -22,6 +28,8 @@ header {
   margin: 0;
   font-size: 38px;
   line-height: 48px;
+  color: black;
+  font-family: "Roboto", sans-serif;
 }
 .selected-city-metrics {
   font-size: 16px;
