@@ -1,0 +1,12 @@
+body {
+  background-color: aqua;
+  font-family: "Roboto", sans-serif;
+}
+.app-area {
+  background: white;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+}
