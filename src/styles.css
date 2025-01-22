@@ -33,7 +33,7 @@ header {
 }
 .selected-city-metrics {
   font-size: 16px;
-  color: rgba(39, 33, 66, 0.4);
+  color: rgba(39, 33, 66, 0.6);
   line-height: 24px;
 }
 .selected-city-metrics strong {
@@ -73,6 +73,7 @@ main {
   font-weight: bold;
   margin-left: 10px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
 }
 
 .headline-temp-unit {
@@ -80,6 +81,7 @@ main {
   margin-top: 16px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
+  color: black;
 }
 
 .todays-weather-data {
