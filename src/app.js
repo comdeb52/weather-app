@@ -13,14 +13,13 @@ function reviseWeather(response) {
   let dateTime = new Date(); // using response.data.time * 1000 gives a time lag for some cities as time ranges up to 5 mins either way
   let iconElement = document.querySelector("#icon");
 
-  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="selected-city-icon"/>`;
-
   cityElement.innerHTML = city;
   temperatureElement.innerHTML = Math.round(temperature);
   conditionElement.innerHTML = condition;
   humidityElement.innerHTML = `${humidity}%`;
   windElement.innerHTML = `${wind}km/h`;
   timeElement.innerHTML = formatDate(dateTime);
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="selected-city-icon"/>`;
 }
 
 function formatDate(dateTime) {
@@ -55,4 +54,4 @@ function handleSearchSubmit(event) {
 let citySearchElement = document.querySelector("#city-search-form");
 citySearchElement.addEventListener("submit", handleSearchSubmit);
 
-searchCity("London");
+searchCity("Glasgow");
