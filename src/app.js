@@ -3,9 +3,18 @@ function reviseWeather(response) {
   let city = response.data.city;
   let temperatureElement = document.querySelector("#callout-temp");
   let temperature = response.data.temperature.current;
+  let conditionElement = document.querySelector("#condition");
+  let condition = response.data.condition.description;
+  let humidityElement = document.querySelector("#humidity");
+  let humidity = response.data.temperature.humidity;
+  let windElement = document.querySelector("#wind");
+  let wind = response.data.wind.speed;
 
   cityElement.innerHTML = city;
   temperatureElement.innerHTML = Math.round(temperature);
+  conditionElement.innerHTML = condition;
+  humidityElement.innerHTML = humidity;
+  windElement.innerHTML = Math.round(wind);
 }
 
 function searchCity(city) {
