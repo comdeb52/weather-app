@@ -11,6 +11,9 @@ function reviseWeather(response) {
   let wind = response.data.wind.speed;
   let timeElement = document.querySelector("#time");
   let dateTime = new Date(); // using response.data.time * 1000 gives a time lag for some cities as time ranges up to 5 mins either way
+  let iconElement = document.querySelector("#icon");
+
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="selected-city-icon"/>`;
 
   cityElement.innerHTML = city;
   temperatureElement.innerHTML = Math.round(temperature);
