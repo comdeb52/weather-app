@@ -9,12 +9,32 @@ function reviseWeather(response) {
   let humidity = response.data.temperature.humidity;
   let windElement = document.querySelector("#wind");
   let wind = response.data.wind.speed;
+  let timeElement = document.querySelector("#time");
+  let dateTime = new Date(); // using response.data.time * 1000 gives a time lag for some cities as time ranges up to 5 mins either way
 
   cityElement.innerHTML = city;
   temperatureElement.innerHTML = Math.round(temperature);
   conditionElement.innerHTML = condition;
   humidityElement.innerHTML = `${humidity}%`;
   windElement.innerHTML = `${wind}km/h`;
+  timeElement.innerHTML = formatDate(dateTime);
+}
+
+function formatDate(dateTime) {
+  let currentMinutes = ("0" + dateTime.getMinutes()).slice(-2);
+  let currentHours = ("0" + dateTime.getHours()).slice(-2);
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[dateTime.getDay()];
+
+  return `${day} ${currentHours}:${currentMinutes}`;
 }
 
 function searchCity(city) {
