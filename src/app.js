@@ -13,8 +13,8 @@ function reviseWeather(response) {
   cityElement.innerHTML = city;
   temperatureElement.innerHTML = Math.round(temperature);
   conditionElement.innerHTML = condition;
-  humidityElement.innerHTML = humidity;
-  windElement.innerHTML = Math.round(wind);
+  humidityElement.innerHTML = `${humidity}%`;
+  windElement.innerHTML = `${wind}km/h`;
 }
 
 function searchCity(city) {
