@@ -92,6 +92,39 @@ main {
 .callout-temp-group {
   display: flex;
 }
+
+.week-forecast {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 15px;
+}
+
+.forecast-day-name {
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  color: purple;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.forecast-day-icon {
+  font-size: 38px;
+  text-align: center;
+}
+
+.forecast-day-temps {
+  text-align: center;
+  margin-top: 10px;
+  color: #0c558d;
+  display: flex;
+  justify-content: center;
+}
+
+.forecast-day-temp {
+  padding: 0 10px;
+}
+
 footer {
   border-top: 1px solid #f9f7fe;
   padding: 30px 0 0 0;
