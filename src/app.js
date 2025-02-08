@@ -10,7 +10,7 @@ function reviseWeather(response) {
   let windElement = document.querySelector("#wind");
   let wind = response.data.wind.speed;
   let timeElement = document.querySelector("#time");
-  let dateTime = new Date(); // using response.data.time * 1000 gives a time lag for some cities as time ranges up to 5 mins either way
+  let dateTime = new Date(response.data.time * 1000);
   let iconElement = document.querySelector("#icon");
 
   cityElement.innerHTML = city;
